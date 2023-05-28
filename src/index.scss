@@ -80,6 +80,18 @@ a {
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+
+    .orange {
+      // margin-left: 30px;
+      color: orange;
+    }
+    .orange2 {
+      margin-left: 30px;
+      color: orange;
+    }
+    .pending {
+      margin-left: 30px;
+    }
     .li {
       margin-left: 30px;
       margin-bottom: 10px;

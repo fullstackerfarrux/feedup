@@ -3,7 +3,7 @@ import assets from "../assets/feeduplogo.png";
 import firstImage from "../assets/firstImage.png";
 import secondImage from "../assets/secondImage.png";
 import thirdImage from "../assets/thirdImage.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -63,36 +63,86 @@ const Home = () => {
         </form>
       </div>
       <ul className="flex scrolforul">
-        <Link to={"/"} className="lu">
+        <NavLink
+          to={"/"}
+          className={({ isActive, isPending }) =>
+            isPending ? "lu pending" : isActive ? "lu orange" : "lu"
+          }
+        >
           Лаваш
-        </Link>
-        <Link to={"/burger"} className="li">
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+          to={"/burger"}
+        >
           Бургеры
-        </Link>
-        <Link to={"/kombo"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/kombo"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Комбо
-        </Link>
-        <Link to={"/sendvich"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/sendvich"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Сэндвич
-        </Link>
-        <Link to={"/pizza"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/pizza"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Пицца
-        </Link>
-        <Link to={"/napitki"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/napitki"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Напитки
-        </Link>
-        <Link to={"/longer"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/longer"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Лонгеры
-        </Link>
-        <Link to={"/sneki"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/sneki"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Снэки
-        </Link>
-        <Link to={"/sous"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/sous"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Соусы
-        </Link>
-        <Link to={"/vafli"} className="li">
+        </NavLink>
+        <NavLink
+          to={"/vafli"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "orange2" : "li"
+          }
+        >
           Вафли
-        </Link>
+        </NavLink>
       </ul>
     </div>
   );
