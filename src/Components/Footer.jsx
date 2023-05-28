@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,7 +11,9 @@ const Footer = () => {
           <p>19 000,00</p>
         </div>
 
-        <button>Заказать</button>
+        <Link to="/oplata">
+          <button>Заказать</button>
+        </Link>
       </div>
     </div>
   );

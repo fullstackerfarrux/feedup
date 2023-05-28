@@ -50,7 +50,7 @@ a {
     margin-bottom: 10px;
     img {
       width: 120px;
-      height: 65px;
+      height: 55px;
       border-radius: 10px;
     }
   }
@@ -361,4 +361,77 @@ a {
     transform: scale(1.2);
     color: white;
   }
+}
+
+
+#oplata{
+  width: 380px;
+  height:700px;
+.oplata-head{
+  align-items:center;
+.back{
+  font-size: 50px;
+  color:orange;
+  margin-left: 15px;
+}
+
+img{
+  width: 125px;
+  height: 55px;
+  border-radius:10px;
+  margin-left:180px;
+}
+}
+
+.oplata-h2{
+  width: 390px;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color:orange;
+  margin-left: 20px;
+  margin-top: 20px;
+  line-height: 37px;
+}
+
+.post{
+  display: flex;
+  width: 350px;
+  height: 140px;
+  background-color: silver;
+  border-radius:10px;
+  margin-left: 15px;
+  margin-top: 20px;
+
+  .labash{
+    width: 180px;
+    height: 120px;
+    border-radius:15px;
+    margin-top: 10px;
+    margin-left: 10px;    
+  }
+
+  .post-txt{
+    margin-left: 15px;
+
+    h5{
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      padding-top: 10px;
+    }
+    .post-txt-p{
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    .post-txt-p2{
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 15px;
+      letter-spacing: 0.5px;
+      margin-top: -15px;
+      color:rgb(221, 218, 218);
+    }
+  }
+}
 }

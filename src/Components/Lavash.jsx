@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Lavash = () => {
+  localStorage.setItem("h1", "hello");
   let product = [
     {
       id: 1,
@@ -82,6 +83,7 @@ const Lavash = () => {
       <Home />
       <div id="lavash">
         <div className="flex flexfor">
+          <h1>{localStorage.getItem("h1")}</h1>
           {product.map((l, index) => (
             <div key={index} className="card">
               <img src={l.lavash_img} alt="lavash" />

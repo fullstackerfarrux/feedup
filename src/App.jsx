@@ -12,6 +12,7 @@ import Longer from "./Components/Longer";
 import Sneki from "./Components/Sneki";
 import Sous from "./Components/Sous";
 import Vafli from "./Components/Vafli";
+import Oplata from "./Components/Oplata";
 
 function App() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -35,6 +36,7 @@ function App() {
         <Route path="/sneki" element={<Sneki />} />
         <Route path="/sous" element={<Sous />} />
         <Route path="/vafli" element={<Vafli />} />
+        <Route path="/oplata" element={<Oplata />}/>
       </Routes>
     </>
   );
