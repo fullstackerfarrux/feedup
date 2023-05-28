@@ -103,7 +103,6 @@ const Burger = () => {
     <>
       <Home />
       <div id="burger">
-        <h1>Burger ochildi danniy yoq lekn</h1>
         <div className="flex flexfor">
           {product.map((b, index) => (
             <div key={index} className="card">
