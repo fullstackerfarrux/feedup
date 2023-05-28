@@ -77,25 +77,37 @@ const Lavash = () => {
       });
   }, []);
 
-  let count = 0;
+  // let count = 0;
 
-  let price = 0;
+  // let price = 0;
+
   let lavashes = [];
 
   let decrement = (l) => {
+    let count = localStorage.getItem(`l_count_${l.id}`);
+    let price = localStorage.getItem(`price`);
+    // console.log(count);
+
+    if (count == null) {
+      count = 0;
+      localStorage.setItem(`l_count_${l.id}`, count);
+    }
+    if (price == null) {
+      price = 0;
+      localStorage.setItem(`price`, price);
+    }
     ++count;
-    price = price + +l.lavash_price;
+    price = +price + +l.lavash_price;
 
     lavashes.push(l);
-    console.log(price);
+    // console.log(price);
     localStorage.setItem(`l_count_${l.id}`, count);
     localStorage.setItem("price", price);
     localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
 
-    console.log(localStorage.getItem("count"));
-    console.log(localStorage.getItem("product"));
+    window.localStorage.setItem("isThisInLocalStorage", price);
+    window.dispatchEvent(new Event("storage"));
   };
-
   return (
     <>
       <Home />
