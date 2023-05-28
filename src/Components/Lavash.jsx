@@ -4,6 +4,23 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Lavash = () => {
+  let product = [
+    {
+      id: 1,
+      lavash_name: "lavashmi burgermi",
+      lavahs_price: "19 000,00",
+    },
+    {
+      id: 2,
+      lavash_name: "lavashmi burgermi",
+      lavahs_price: "19 000,00",
+    },
+    {
+      id: 3,
+      lavash_name: "lavashmi burgermi",
+      lavahs_price: "19 000,00",
+    },
+  ];
   const [lavash, setLavash] = useState([]);
 
   useEffect(() => {
@@ -23,7 +40,7 @@ const Lavash = () => {
       <Home />
       <div id="lavash">
         <div className="flex flexfor">
-          {lavash.map((l, index) => (
+          {product.map((l, index) => (
             <div key={index} className="card">
               <img src={l.lavash_img} alt="lavash" />
               <p>{l.lavash_name}</p>
