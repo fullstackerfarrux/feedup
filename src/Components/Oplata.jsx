@@ -1,11 +1,14 @@
 import React from "react";
 import logo from "../assets/feeduplogo.png";
+import { Link } from "react-router-dom";
 
 const Oplata = () => {
   return (
     <div id="oplata">
       <div className="flex oplata-head">
-        <i className="fa-solid fa-share fa-flip-horizontal back"></i>
+        <Link to={"/"}>
+          <i className="fa-solid fa-share fa-flip-horizontal back"></i>
+        </Link>
         <img src={logo} alt="logo" />
       </div>
       <h2 className="oplata-h2">Оплатить удобным для вас способом</h2>
