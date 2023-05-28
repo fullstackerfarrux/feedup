@@ -10,14 +10,14 @@ const Burger = () => {
       id: 1,
       burger_name: "Лонг Уппер куринний",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpgg",
+        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpg",
       burger_price: "27 000,00",
     },
     {
       id: 2,
       burger_name: "Лонг Уппер говяжий",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpgg",
+        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpg",
       burger_price: "34 000,00",
     },
     {

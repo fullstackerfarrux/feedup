@@ -77,6 +77,17 @@ const Lavash = () => {
       });
   }, []);
 
+  let count = 0;
+
+  let decrement = (l) => {
+    ++count;
+    localStorage.setItem("count", count, l);
+    localStorage.setItem("product", `l_id ${l}`);
+
+    console.log(localStorage.getItem("count"));
+    console.log(localStorage.getItem("product"));
+  };
+
   return (
     <>
       <Home />
@@ -89,7 +100,12 @@ const Lavash = () => {
               <h6>UZS {l.lavash_price}</h6>
               <div className="flex">
                 <button>-</button>
-                <button className="plus">+</button>
+                <button
+                  onClick={() => decrement(l.id, l.price)}
+                  className="plus"
+                >
+                  +
+                </button>
               </div>
             </div>
           ))}
