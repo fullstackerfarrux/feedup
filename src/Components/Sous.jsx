@@ -10,19 +10,19 @@ const Sous = () => {
     {
       id: 1,
       sous_name: "Сырный соус",
-      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382250863.jpg",
+      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382421230.jpg",
       sous_price: "2 000,00",
     },
     {
       id: 2,
       sous_name: "соус чили",
-      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382250863.jpg",
+      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382375725.jpg",
       sous_price: "2 000,00",
     },
     {
       id: 3,
       sous_name: "соус майонез",
-      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382250863.jpg",
+      sous_img: "https://feedup-api.itsone.uz/uploads/photo-1667382315049.jpg",
       sous_price: "2 000,00",
     },
     {

@@ -11,21 +11,21 @@ const Longer = () => {
       id: 1,
       longer_name: "Донар",
       longer_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381700739.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381645015.jpg",
       longer_price: "27 000,00",
     },
     {
       id: 2,
       longer_name: "Биг донар",
       longer_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381700739.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381581733.jpg",
       longer_price: "35 000,00",
     },
     {
       id: 3,
       longer_name: "Кинг-Дог",
       longer_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381700739.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381737652.jpg",
       longer_price: "22 000,00",
     },
     {

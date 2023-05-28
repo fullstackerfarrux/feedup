@@ -8,7 +8,7 @@ const Kombo = () => {
     {
       id: 1,
       kombo_name: "Комбо Биг донар",
-      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121857865.jpg",
+      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121716314.jpg",
       kombo_price: "56 000,00",
     },
     {
@@ -20,25 +20,25 @@ const Kombo = () => {
     {
       id: 3,
       kombo_name: "Комбо Чизбургер",
-      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121857865.jpg",
+      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121886467.jpg",
       kombo_price: "51 000,00",
     },
     {
       id: 4,
       kombo_name: "Комбо Лаваш",
-      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121857865.jpg",
+      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121914964.jpg",
       kombo_price: "50 000,00",
     },
     {
       id: 5,
       kombo_name: "Комбо Донар",
-      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121857865.jpg",
+      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121936025.jpg",
       kombo_price: "48 000,00",
     },
     {
       id: 6,
       kombo_name: "Кидс Бокс",
-      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121857865.jpg",
+      kombo_img: "https://feedup-api.itsone.uz/uploads/photo-1683121981802.jpg",
       kombo_price: "45 000,00",
     },
   ];

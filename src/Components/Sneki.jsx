@@ -11,35 +11,35 @@ const Sneki = () => {
         id: 1,
         sneki_name: "Сырные кубики",
         sneki_img:
-          "https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg",
+          "https://feedup-api.itsone.uz/uploads/photo-1667384545140.jpg",
         sneki_price: "19 000,00",
       },
       {
-        id: 1,
+        id: 2,
         sneki_name: "Картофель по-деревенски",
         sneki_img:
-          "https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg",
+          "https://feedup-api.itsone.uz/uploads/photo-1667384447240.jpg",
         sneki_price: "15 000,00",
       },
       {
-        id: 1,
+        id: 3,
         sneki_name: "Чикен Стик",
         sneki_img:
           "https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg",
         sneki_price: "20 000,00",
       },
       {
-        id: 1,
+        id: 4,
         sneki_name: "Картофельные шарики",
         sneki_img:
-          "https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg",
+          "https://feedup-api.itsone.uz/uploads/photo-1667384504841.jpg",
         sneki_price: "17 000,00",
       },
       {
-        id: 1,
+        id: 5,
         sneki_name: "Картофель фри",
         sneki_img:
-          "https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg",
+          "https://feedup-api.itsone.uz/uploads/photo-1667384392241.jpg",
         sneki_price: "14 000,00",
       },
     ];

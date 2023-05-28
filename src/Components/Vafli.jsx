@@ -16,19 +16,19 @@ const Vafli = () => {
     {
       id: 2,
       vafli_name: "BUBBLE WAFFLE (клубника)",
-      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380573235.jpg",
       vafli_price: "36 000,00",
     },
     {
       id: 3,
       vafli_name: "BUBBLE WAFFLE (банан)",
-      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380531785.jpg",
       vafli_price: "36 000,00",
     },
     {
       id: 4,
       vafli_name: "BUBBLE WAFFLE (классика)",
-      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667378720425.jpg",
       vafli_price: "33 000,00",
     },
   ];

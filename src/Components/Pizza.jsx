@@ -10,7 +10,7 @@ const Pizza = () => {
     {
       id: 1,
       pizza_name: "Пицца FEED UP",
-      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381927129.jpg",
       pizza_price: "60 000,00",
     },
     {
@@ -22,13 +22,13 @@ const Pizza = () => {
     {
       id: 3,
       pizza_name: "Пицца Маргарита",
-      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381864861.jpg",
       pizza_price: "45 000,00",
     },
     {
       id: 4,
       pizza_name: "Пицца Комбинированная",
-      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381821533.jpg",
       pizza_price: "53 000,00",
     },
   ];

@@ -10,77 +10,77 @@ const Burger = () => {
       id: 1,
       burger_name: "Лонг Уппер куринний",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpgg",
       burger_price: "27 000,00",
     },
     {
       id: 2,
       burger_name: "Лонг Уппер говяжий",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1677623868570.jpgg",
       burger_price: "34 000,00",
     },
     {
       id: 3,
       burger_name: "Чикен Зингер с сыром",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667376665463.jpg",
       burger_price: "27 000,00",
     },
     {
       id: 4,
       burger_name: "Дабл Бургер с сыром",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667377147462.jpg",
       burger_price: "38 000,00",
     },
     {
       id: 5,
       burger_name: "Гамбургер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667376998223.jpg",
       burger_price: "27 000,00",
     },
     {
       id: 6,
       burger_name: "Барбекю Бургер c сыром",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667376894109.jpg",
       burger_price: "31 000,00",
     },
     {
       id: 7,
       burger_name: "Дабл Бургер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667376703074.jpg",
       burger_price: "35 000,00",
     },
     {
       id: 8,
       burger_name: "Чикен Зингер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667377074738.jpg",
       burger_price: "24 000,00",
     },
     {
       id: 9,
       burger_name: "Барбекю Бургер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667378426154.jpg",
       burger_price: "28 000,00",
     },
     {
       id: 10,
       burger_name: "Чизбургер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667378176801.jpg",
       burger_price: "30 000,00",
     },
     {
       id: 11,
       burger_name: "Чикенбургер",
       burger_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667378176801.jpg",
       burger_price: "26 000,00",
     },
   ];

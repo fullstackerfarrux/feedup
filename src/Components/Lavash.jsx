@@ -17,14 +17,14 @@ const Lavash = () => {
       id: 2,
       lavash_name: "Лаваш Говяжий с сыром",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "32 000,00",
     },
     {
       id: 3,
       lavash_name: "Лаваш Куриный ",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "28 000,00",
     },
     {
@@ -38,28 +38,28 @@ const Lavash = () => {
       id: 5,
       lavash_name: "Лаваш Говяжий ",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "29 000,00",
     },
     {
       id: 6,
       lavash_name: "Лаваш Куриный с сыром ",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "31 000,00",
     },
     {
       id: 7,
       lavash_name: "Лаваш Халапеньо с сыром ",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "32 000,00",
     },
     {
       id: 8,
       lavash_name: "Лаваш Халапеньо ",
       lavash_img:
-        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+        "https://feedup-api.itsone.uz/uploads/photo-1667381096354.jpg",
       lavash_price: "29 000,00",
     },
   ];
