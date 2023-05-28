@@ -5,6 +5,86 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Burger = () => {
+  let product = [
+    {
+      id: 1,
+      burger_name: "Лонг Уппер куринний",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "27 000,00",
+    },
+    {
+      id: 2,
+      burger_name: "Лонг Уппер говяжий",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "34 000,00",
+    },
+    {
+      id: 3,
+      burger_name: "Чикен Зингер с сыром",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "27 000,00",
+    },
+    {
+      id: 4,
+      burger_name: "Дабл Бургер с сыром",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "38 000,00",
+    },
+    {
+      id: 5,
+      burger_name: "Гамбургер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "27 000,00",
+    },
+    {
+      id: 6,
+      burger_name: "Барбекю Бургер c сыром",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "31 000,00",
+    },
+    {
+      id: 7,
+      burger_name: "Дабл Бургер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "35 000,00",
+    },
+    {
+      id: 8,
+      burger_name: "Чикен Зингер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "24 000,00",
+    },
+    {
+      id: 9,
+      burger_name: "Барбекю Бургер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "28 000,00",
+    },
+    {
+      id: 10,
+      burger_name: "Чизбургер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "30 000,00",
+    },
+    {
+      id: 11,
+      burger_name: "Чикенбургер",
+      burger_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667376815847.jpg",
+      burger_price: "26 000,00",
+    },
+  ];
+
   const [burger, setBurger] = useState([]);
 
   useEffect(() => {
@@ -25,7 +105,7 @@ const Burger = () => {
       <div id="burger">
         <h1>Burger ochildi danniy yoq lekn</h1>
         <div className="flex flexfor">
-          {burger.map((b, index) => (
+          {product.map((b, index) => (
             <div key={index} className="card">
               <img src={b.burger_img} alt="lavash" />
               <p>{b.burger_name}</p>

@@ -5,6 +5,34 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Pizza = () => {
+
+  let product = [
+    {
+      id: 1,
+      pizza_name: "Пицца FEED UP",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_price: "60 000,00",
+    },
+    {
+      id: 2,
+      pizza_name: "Пицца Пеперони",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_price: "53 000,00",
+    },
+    {
+      id: 3,
+      pizza_name: "Пицца Маргарита",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_price: "45 000,00",
+    },
+    {
+      id: 4,
+      pizza_name: "Пицца Комбинированная",
+      pizza_img: "https://feedup-api.itsone.uz/uploads/photo-1667381892763.jpg",
+      pizza_price: "53 000,00",
+    },
+  ];
+
   const [pizza, setPizza] = useState([]);
 
   useEffect(() => {
@@ -24,7 +52,7 @@ const Pizza = () => {
       <Home />
       <div id="pizza">
         <div className="flex flexfor">
-          {pizza.map((p, index) => (
+          {product.map((p, index) => (
             <div key={index} className="card">
               <img src={p.pizza_img} alt="lavash" />
               <p>{p.pizza_name}</p>

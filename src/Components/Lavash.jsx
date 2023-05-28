@@ -7,18 +7,60 @@ const Lavash = () => {
   let product = [
     {
       id: 1,
-      lavash_name: "lavashmi burgermi",
-      lavahs_price: "19 000,00",
+      lavash_name: "Лаваш Мини",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "19 000,00",
     },
+
     {
       id: 2,
-      lavash_name: "lavashmi burgermi",
-      lavahs_price: "19 000,00",
+      lavash_name: "Лаваш Говяжий с сыром",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "32 000,00",
     },
     {
       id: 3,
-      lavash_name: "lavashmi burgermi",
-      lavahs_price: "19 000,00",
+      lavash_name: "Лаваш Куриный ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "28 000,00",
+    },
+    {
+      id: 4,
+      lavash_name: "Лаваш Мини с сыром ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "22 000,00",
+    },
+    {
+      id: 5,
+      lavash_name: "Лаваш Говяжий ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "29 000,00",
+    },
+    {
+      id: 6,
+      lavash_name: "Лаваш Куриный с сыром ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "31 000,00",
+    },
+    {
+      id: 7,
+      lavash_name: "Лаваш Халапеньо с сыром ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "32 000,00",
+    },
+    {
+      id: 8,
+      lavash_name: "Лаваш Халапеньо ",
+      lavash_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667381138171.jpg",
+      lavash_price: "29 000,00",
     },
   ];
   const [lavash, setLavash] = useState([]);

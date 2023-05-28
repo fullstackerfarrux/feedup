@@ -4,6 +4,20 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Sendvich = () => {
+
+  let product = [
+    {
+      id: 1,
+      sendvich_name: "Клаб Сендвич",
+      sendvich_img:
+        "https://feedup-api.itsone.uz/uploads/photo-1667384645546.jpg",
+      sendvich_price: "28 000,00",
+    },
+  ];
+
+
+
+
   const [sendvich, setSendvich] = useState([]);
 
   useEffect(() => {
@@ -22,7 +36,7 @@ const Sendvich = () => {
       <Home />
       <div id="sendvich">
         <div className="flex flexfor">
-          {sendvich.map((s, index) => (
+          {product.map((s, index) => (
             <div key={index} className="card">
               <img src={s.sendvich_img} alt="lavash" />
               <p>{s.sendvich_name}</p>

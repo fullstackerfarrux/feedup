@@ -5,6 +5,34 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Vafli = () => {
+
+  let product = [
+    {
+      id: 1,
+      vafli_name: "BUBBLE WAFFLE (микс)",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_price: "41 000,00",
+    },
+    {
+      id: 2,
+      vafli_name: "BUBBLE WAFFLE (клубника)",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_price: "36 000,00",
+    },
+    {
+      id: 3,
+      vafli_name: "BUBBLE WAFFLE (банан)",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_price: "36 000,00",
+    },
+    {
+      id: 4,
+      vafli_name: "BUBBLE WAFFLE (классика)",
+      vafli_img: "https://feedup-api.itsone.uz/uploads/photo-1667380628401.jpg",
+      vafli_price: "33 000,00",
+    },
+  ];
+  
   const [vafli, setVafli] = useState([]);
 
   useEffect(() => {
@@ -24,7 +52,7 @@ const Vafli = () => {
       <Home />
       <div id="pizza">
         <div className="flex flexfor">
-          {vafli.map((p, index) => (
+          {product.map((p, index) => (
             <div key={index} className="card">
               <img src={p.vafli_img} alt="lavash" />
               <p>{p.vafli_name}</p>
