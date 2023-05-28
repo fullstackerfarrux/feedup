@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
 const Burger = () => {
-
   const [burger, setBurger] = useState([]);
 
   useEffect(() => {
@@ -24,6 +23,7 @@ const Burger = () => {
     <>
       <Home />
       <div id="burger">
+        <h1>Burger ochildi danniy yoq lekn</h1>
         <div className="flex flexfor">
           {burger.map((b, index) => (
             <div key={index} className="card">
