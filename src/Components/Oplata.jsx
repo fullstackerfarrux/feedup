@@ -120,6 +120,11 @@ const Oplata = () => {
       };
     });
 
+    lavashes.map((p) => {
+      localStorage.removeItem("price");
+      localStorage.removeItem(`l_count_${p.id}`);
+      localStorage.removeItem(`lavashs`);
+    });
     tg.sendData(JSON.stringify(data));
   }, []);
 
