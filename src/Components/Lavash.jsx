@@ -172,7 +172,9 @@ const Lavash = () => {
     window.localStorage.setItem(`l_count_${l.id}`, count);
     window.dispatchEvent(new Event("counts"));
   };
-  let ids = localStorage.getItem(id);
+  useEffect(() => {
+    tg.MainButton.hide();
+  });
   return (
     <>
       <Home />
