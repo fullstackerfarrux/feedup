@@ -108,14 +108,13 @@ const Oplata = () => {
   let buttonk = () => {
     useEffect(() => {
       tg.MainButton.setParams({
-        text: "Оплатить",
+        text: `Оплатить ${allCash} 000,00`,
       });
     }, []);
 
     useEffect(() => {
       if (localStorage.getItem("price") > 0) {
-
-        tg.MainButton.setParams({ color: "#ffa600f" });
+        tg.MainButton.setParams({ color: "#ffa600", text_color: "#fff" });
         tg.MainButton.show();
       } else {
         tg.MainButton.hide();
@@ -203,10 +202,10 @@ const Oplata = () => {
           <button className="payme">Оплата через Payme</button>
         </div>
       </div>
-      {buttonk()}
-      <div className="footer-oplatit">
+      {/* {buttonk()} */}
+      {/* <div className="footer-oplatit">
         <button className="footer-btn">Oплатить {allCash} 000,00 UZS</button>
-      </div>
+      </div> */}
     </div>
   );
 };
