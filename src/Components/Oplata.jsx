@@ -114,6 +114,8 @@ const Oplata = () => {
 
     useEffect(() => {
       if (localStorage.getItem("price") > 0) {
+
+        tg.MainButton.setParams({ color: "#ffa600f" });
         tg.MainButton.show();
       } else {
         tg.MainButton.hide();

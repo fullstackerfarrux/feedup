@@ -14,7 +14,10 @@ import Sous from "./Components/Sous";
 import Vafli from "./Components/Vafli";
 import Oplata from "./Components/Oplata";
 
+const tg = window.Telegram.WebApp;
+
 function App() {
+  tg.expand();
   const [isAlertVisible, setIsAlertVisible] = useState(false);
 
   setTimeout(() => {
@@ -36,7 +39,7 @@ function App() {
         <Route path="/sneki" element={<Sneki />} />
         <Route path="/sous" element={<Sous />} />
         <Route path="/vafli" element={<Vafli />} />
-        <Route path="/oplata" element={<Oplata />}/>
+        <Route path="/oplata" element={<Oplata />} />
       </Routes>
     </>
   );
