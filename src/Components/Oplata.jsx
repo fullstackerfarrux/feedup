@@ -14,7 +14,7 @@ const Oplata = () => {
 
   const [loggedInName, setLoggedInName] = useState(null);
 
-  console.log(lavashes);
+  // console.log(lavashes);
 
   // let decrement = async (l) => {
   //   let count = localStorage.getItem(`l_count_${l.id}`);
@@ -105,12 +105,12 @@ const Oplata = () => {
   //   window.dispatchEvent(new Event("counts"));
   // };
 
-  let l_id = lavashes.map((l) => {
-    return {
-      id: l.id,
-    };
-  });
-  console.log(l_id);
+  // let l_id = lavashes.map((l) => {
+  //   return {
+  //     id: l.id,
+  //   };
+  // });
+  // console.log(l_id);
   const sendData = useCallback(() => {
     const data = lavashes.map((l) => {
       return {
@@ -218,9 +218,11 @@ const Oplata = () => {
         </div>
       </div>
       {/* {buttonk()} */}
-      {/* <div className="footer-oplatit">
-        <button className="footer-btn">Oплатить {allCash} 000,00 UZS</button>
-      </div> */}
+      <div className="footer-oplatit">
+        <button onClick={() => sendData()} className="footer-btn">
+          Oплатить {allCash} 000,00 UZS
+        </button>
+      </div>
     </div>
   );
 };
