@@ -179,7 +179,6 @@ const Lavash = () => {
     <>
       <Home />
       <div id="lavash">
-        <p>ozgardi</p>
         <div className="flex flexfor">
           {product.map((l, index) => (
             <div key={index} className="card">

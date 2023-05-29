@@ -13,13 +13,18 @@ const Footer = () => {
     setLoggedInName(localStorage.getItem("price") || null);
   }
 
+  if (loggedInName < 0) {
+    localStorage.setItem("price", 0);
+  }
+
   return (
     <div id="footer">
       <div className="flex">
         <div className="footer-text">
           <p className="all">Общая сумма</p>
           <p className="uzs">Uzs</p>
-          {loggedInName != null ? <p>{loggedInName} 000,00</p> : ""}
+          {/* {loggedInName < 0 ?  : ""} */}
+          {loggedInName < 0 ? "" : <p>{loggedInName} 000,00</p>}
         </div>
         {loggedInName > 0 ? (
           <Link to="/oplata">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import logo from "../assets/feeduplogo.png";
 import { Link } from "react-router-dom";
 
@@ -16,94 +16,120 @@ const Oplata = () => {
 
   console.log(lavashes);
 
-  let decrement = async (l) => {
-    let count = localStorage.getItem(`l_count_${l.id}`);
-    let price = localStorage.getItem(`price`);
+  // let decrement = async (l) => {
+  //   let count = localStorage.getItem(`l_count_${l.id}`);
+  //   let price = localStorage.getItem(`price`);
 
-    if (count == null) {
-      count = 0;
-      localStorage.setItem(`l_count_${l.id}`, count);
-    }
-    if (price == null) {
-      price = 0;
-      localStorage.setItem(`price`, price);
-    }
-    ++count;
-    price = +price + +l.lavash_price;
+  //   if (count == null) {
+  //     count = 0;
+  //     localStorage.setItem(`l_count_${l.id}`, count);
+  //   }
+  //   if (price == null) {
+  //     price = 0;
+  //     localStorage.setItem(`price`, price);
+  //   }
+  //   ++count;
+  //   price = +price + +l.lavash_price;
 
-    var found = false;
+  //   var found = false;
 
-    for (var i = 0; i < lavashes.length; i++) {
-      if (lavashes[i].id == +l.id) {
-        found = true;
-        break;
-      }
-    }
+  //   for (var i = 0; i < lavashes.length; i++) {
+  //     if (lavashes[i].id == +l.id) {
+  //       found = true;
+  //       break;
+  //     }
+  //   }
 
-    if (found == false) {
-      lavashes.push(l);
-    }
+  //   if (found == false) {
+  //     lavashes.push(l);
+  //   }
 
-    localStorage.setItem(`l_count_${l.id}`, count);
-    // localStorage.setItem(`id`, JSON.stringify(id));
-    localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
+  //   localStorage.setItem(`l_count_${l.id}`, count);
+  //   // localStorage.setItem(`id`, JSON.stringify(id));
+  //   localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
 
-    window.localStorage.setItem("price", price);
-    window.dispatchEvent(new Event("storage"));
+  //   window.localStorage.setItem("price", price);
+  //   window.dispatchEvent(new Event("storage"));
 
-    setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
-    window.addEventListener("counts", storageEventHandler, false);
+  //   setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+  //   window.addEventListener("counts", storageEventHandler, false);
 
-    function storageEventHandler() {
-      setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
-    }
+  //   function storageEventHandler() {
+  //     setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+  //   }
 
-    window.localStorage.setItem(`l_count_${l.id}`, count);
-    window.dispatchEvent(new Event("counts"));
-  };
+  //   window.localStorage.setItem(`l_count_${l.id}`, count);
+  //   window.dispatchEvent(new Event("counts"));
+  // };
 
-  let increment = (l) => {
-    let count = localStorage.getItem(`l_count_${l.id}`);
-    let price = localStorage.getItem(`price`);
+  // let increment = (l) => {
+  //   let count = localStorage.getItem(`l_count_${l.id}`);
+  //   let price = localStorage.getItem(`price`);
 
-    if (count > 0) {
-      --count;
-    }
+  //   if (count > 0) {
+  //     --count;
+  //   }
 
-    if (price >= 0) {
-      price = +price - +l.lavash_price;
-    }
-    let found = 0;
-    if (count < 1) {
-      for (var i = 0; i < lavashes.length; i++) {
-        if (lavashes[i].id == +l.id) {
-          found = i;
-          break;
-        }
-      }
+  //   if (price >= 0) {
+  //     price = +price - +l.lavash_price;
+  //   }
+  //   let found = 0;
+  //   if (count < 1) {
+  //     for (var i = 0; i < lavashes.length; i++) {
+  //       if (lavashes[i].id == +l.id) {
+  //         found = i;
+  //         break;
+  //       }
+  //     }
 
-      if (found >= 0) {
-        lavashes.splice(found, 1);
-      }
-    }
+  //     if (found >= 0) {
+  //       lavashes.splice(found, 1);
+  //     }
+  //   }
 
-    localStorage.setItem(`l_count_${l.id}`, count);
-    localStorage.setItem(`price`, price);
-    localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
+  //   localStorage.setItem(`l_count_${l.id}`, count);
+  //   localStorage.setItem(`price`, price);
+  //   localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
 
-    window.localStorage.setItem("price", price);
-    window.dispatchEvent(new Event("storage"));
+  //   window.localStorage.setItem("price", price);
+  //   window.dispatchEvent(new Event("storage"));
 
-    setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
-    window.addEventListener("counts", storageEventHandler, false);
+  //   setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+  //   window.addEventListener("counts", storageEventHandler, false);
 
-    function storageEventHandler() {
-      setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
-    }
+  //   function storageEventHandler() {
+  //     setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+  //   }
 
-    window.localStorage.setItem(`l_count_${l.id}`, count);
-    window.dispatchEvent(new Event("counts"));
-  };
+  //   window.localStorage.setItem(`l_count_${l.id}`, count);
+  //   window.dispatchEvent(new Event("counts"));
+  // };
+
+  let l_id = lavashes.map((l) => {
+    return {
+      id: l.id,
+    };
+  });
+  console.log(l_id);
+  const sendData = useCallback(() => {
+    const data = lavashes.map((l) => {
+      return {
+        name: l.lavash_name,
+        price: l.lavash_price,
+        count: localStorage.getItem(`l_count_${l.id}`),
+      };
+    });
+
+    tg.sendData(JSON.stringify(data));
+  }, []);
+
+  useEffect(() => {
+    tg.onEvent("mainButtonClicked", sendData);
+
+    return () => {
+      tg.offEvent("mainButtonClicked", sendData);
+    };
+  });
 
   useEffect(() => {
     tg.MainButton.setParams({
@@ -137,7 +163,7 @@ const Oplata = () => {
             <img src={p.lavash_img} alt="" />
             <div className="quantity-price">
               <p>{p.lavash_price} 000,00 UZS</p>
-              <div className="buttons">
+              {/* <div className="buttons">
                 {localStorage.getItem(`l_count_${p.id}`) >= 1 ? (
                   <button
                     className="btn-minus increment"
@@ -159,7 +185,7 @@ const Oplata = () => {
                 <button onClick={() => decrement(p)} className="btn-plus plus">
                   +
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
