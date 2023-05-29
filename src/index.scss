@@ -136,6 +136,10 @@ a {
       color: orange;
     }
 
+    .increment {
+      margin-right: 20px;
+    }
+
     button {
       // margin-left: 40px;
       width: 60px;
@@ -144,6 +148,10 @@ a {
       border-radius: 10px;
       background-color: grey;
       color: white;
+
+      :disabled {
+        background-color: white;
+      }
     }
 
     .plus {
@@ -459,7 +467,13 @@ a {
       justify-content: space-between;
       border-bottom: 1px solid #a0a0a0;
 
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
       .quantity-name {
+        width: 150px;
         font-size: 19px;
         font-weight: 500;
         margin-bottom: 0;
@@ -562,10 +576,10 @@ a {
 
       .payme {
         all: unset;
-        color: white;
+        color: silver;
         padding: 13px 6px;
         border-radius: 20px;
-        background-color: orange;
+        // background-color: orange;
       }
     }
   }
@@ -576,9 +590,11 @@ a {
     width: 380px;
     position: sticky;
     bottom: 0;
-    border-radius: 19px;
+    border-radius: 19px 19px 0px 0px;
     box-shadow: 0 0 15px silver;
     margin-top: 150px;
+    background-color: white;
+
     .footer-btn {
       all: unset;
       width: 320px;

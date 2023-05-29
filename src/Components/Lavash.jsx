@@ -2,8 +2,12 @@ import React from "react";
 import Home from "./Home";
 import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
+const tg = window.Telegram.WebApp;
 
+let lavashes = [];
+const id = [];
 const Lavash = () => {
+  let [lav, setLav] = useState(lavashes);
   let product = [
     {
       id: 1,
@@ -77,16 +81,11 @@ const Lavash = () => {
       });
   }, []);
 
-  // let count = 0;
+  const [loggedInName, setLoggedInName] = useState(null);
 
-  // let price = 0;
-
-  let lavashes = [];
-
-  let decrement = (l) => {
+  let decrement = async (l) => {
     let count = localStorage.getItem(`l_count_${l.id}`);
     let price = localStorage.getItem(`price`);
-    // console.log(count);
 
     if (count == null) {
       count = 0;
@@ -99,15 +98,81 @@ const Lavash = () => {
     ++count;
     price = +price + +l.lavash_price;
 
-    lavashes.push(l);
-    // console.log(price);
+    var found = false;
+
+    for (var i = 0; i < lavashes.length; i++) {
+      if (lavashes[i].id == +l.id) {
+        found = true;
+        break;
+      }
+    }
+
+    if (found == false) {
+      id.push(l.id);
+      lavashes.push(l);
+    }
+
     localStorage.setItem(`l_count_${l.id}`, count);
-    localStorage.setItem("price", price);
+    localStorage.setItem(`id`, JSON.stringify(id));
     localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
 
-    window.localStorage.setItem("isThisInLocalStorage", price);
+    window.localStorage.setItem("price", price);
     window.dispatchEvent(new Event("storage"));
+
+    setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+    window.addEventListener("counts", storageEventHandler, false);
+
+    function storageEventHandler() {
+      setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+    }
+
+    window.localStorage.setItem(`l_count_${l.id}`, count);
+    window.dispatchEvent(new Event("counts"));
   };
+
+  let increment = (l) => {
+    let count = localStorage.getItem(`l_count_${l.id}`);
+    let price = localStorage.getItem(`price`);
+
+    if (count > 0) {
+      --count;
+    }
+
+    if (price >= 0) {
+      price = +price - +l.lavash_price;
+    }
+    let found = 0;
+    if (count < 1) {
+      for (var i = 0; i < lavashes.length; i++) {
+        if (lavashes[i].id == +l.id) {
+          found = i;
+          break;
+        }
+      }
+
+      if (found >= 0) {
+        lavashes.splice(found, 1);
+      }
+    }
+
+    localStorage.setItem(`l_count_${l.id}`, count);
+    localStorage.setItem(`price`, price);
+    localStorage.setItem(`lavashs`, JSON.stringify(lavashes));
+
+    window.localStorage.setItem("price", price);
+    window.dispatchEvent(new Event("storage"));
+
+    setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+    window.addEventListener("counts", storageEventHandler, false);
+
+    function storageEventHandler() {
+      setLoggedInName(localStorage.getItem(`l_count_${l.id}`) || null);
+    }
+
+    window.localStorage.setItem(`l_count_${l.id}`, count);
+    window.dispatchEvent(new Event("counts"));
+  };
+  let ids = localStorage.getItem(id);
   return (
     <>
       <Home />
@@ -119,7 +184,21 @@ const Lavash = () => {
               <p>{l.lavash_name}</p>
               <h6>UZS {l.lavash_price} 000,00</h6>
               <div className="flex">
-                <button>-</button>
+                {localStorage.getItem(`l_count_${l.id}`) >= 1 ? (
+                  <button className="increment" onClick={() => increment(l)}>
+                    -
+                  </button>
+                ) : (
+                  <button
+                    disabled
+                    style={{ backgroundColor: "silver" }}
+                    onClick={() => increment(l)}
+                    className="increment"
+                  >
+                    -
+                  </button>
+                )}
+                {l.id ? localStorage.getItem(`l_count_${l.id}`) : "0"}
                 <button onClick={() => decrement(l)} className="plus">
                   +
                 </button>

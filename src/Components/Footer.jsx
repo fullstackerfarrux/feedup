@@ -19,15 +19,15 @@ const Footer = () => {
         <div className="footer-text">
           <p className="all">Общая сумма</p>
           <p className="uzs">Uzs</p>
-          {/* {window.addEventListener("storage", () => { */}
-          <p>{loggedInName} 000,00</p>
-          {/* })} */}
-          {/* <p>{obsh} 000,00</p> */}
+          {loggedInName != null ? <p>{loggedInName} 000,00</p> : ""}
         </div>
-
-        <Link to="/oplata">
+        {loggedInName > 0 ? (
+          <Link to="/oplata">
+            <button>Заказать</button>
+          </Link>
+        ) : (
           <button>Заказать</button>
-        </Link>
+        )}
       </div>
     </div>
   );
