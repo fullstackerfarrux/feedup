@@ -218,11 +218,11 @@ const Oplata = () => {
         </div>
       </div>
       {/* {buttonk()} */}
-      <div className="footer-oplatit">
+      {/* <div className="footer-oplatit">
         <button onClick={() => sendData()} className="footer-btn">
           Oплатить {allCash} 000,00 UZS
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

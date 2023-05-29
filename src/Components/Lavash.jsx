@@ -5,7 +5,8 @@ import { useEffect, useState, useMemo } from "react";
 const tg = window.Telegram.WebApp;
 
 let lavashes = [];
-const id = [];
+const id = [1, 2, 3, 4, 5, 6, 7, 8];
+localStorage.setItem("id", [id]);
 localStorage.setItem("l_count_1", 0);
 localStorage.setItem("l_count_2", 0);
 localStorage.setItem("l_count_3", 0);
@@ -114,9 +115,19 @@ const Lavash = () => {
         break;
       }
     }
+    let ids = false;
+    for (var i = 0; i < id.length; i++) {
+      if (id[i].id == +l.id) {
+        found = true;
+        break;
+      }
+    }
+
+    if (ids == true) {
+      id.push(l.id);
+    }
 
     if (found == false) {
-      id.push(l.id);
       lavashes.push(l);
     }
 
