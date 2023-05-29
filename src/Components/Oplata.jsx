@@ -105,31 +105,15 @@ const Oplata = () => {
     window.dispatchEvent(new Event("counts"));
   };
 
-  let buttonk = () => {
-    useEffect(() => {
-      tg.MainButton.setParams({
-        text: `Оплатить ${allCash} 000,00`,
-      });
-    }, []);
-
-    useEffect(() => {
-      if (localStorage.getItem("price") > 0) {
-        tg.MainButton.setParams({ color: "#ffa600", text_color: "#fff" });
-        tg.MainButton.show();
-      } else {
-        tg.MainButton.hide();
-      }
-    });
-  };
-
   useEffect(() => {
     tg.MainButton.setParams({
-      text: "Оплатить",
+      text: `Оплатить ${allCash} 000,00`,
     });
   }, []);
 
   useEffect(() => {
     if (localStorage.getItem("price") > 0) {
+      tg.MainButton.setParams({ color: "#ffa600", text_color: "#fff" });
       tg.MainButton.show();
     } else {
       tg.MainButton.hide();
