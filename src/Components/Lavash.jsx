@@ -6,6 +6,14 @@ const tg = window.Telegram.WebApp;
 
 let lavashes = [];
 const id = [];
+localStorage.setItem("l_count_1", 0);
+localStorage.setItem("l_count_2", 0);
+localStorage.setItem("l_count_3", 0);
+localStorage.setItem("l_count_4", 0);
+localStorage.setItem("l_count_5", 0);
+localStorage.setItem("l_count_6", 0);
+localStorage.setItem("l_count_7", 0);
+localStorage.setItem("l_count_8", 0);
 const Lavash = () => {
   let [lav, setLav] = useState(lavashes);
   let product = [
